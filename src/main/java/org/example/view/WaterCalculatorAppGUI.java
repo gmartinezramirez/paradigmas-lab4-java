@@ -31,10 +31,15 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
         try {
             if (event.getSource() == buttonAction) {
                 String message = "Amigo, necesitas tomar %.1f L de agua";
-                float weight = Float.parseFloat(fieldWeight.getText());
-                float amountWaterToDrink = calculateAmountOfWater(weight);
-                message = String.format(message, amountWaterToDrink);
-                JOptionPane.showMessageDialog(this, message);
+                float weight = Float.parseFloat(fieldWeight.getText()); // Aca recupera el texto
+                if (weight > 2000) {
+                    JOptionPane.showMessageDialog(this, "error");
+                }
+                else {
+                    float amountWaterToDrink = calculateAmountOfWater(weight);
+                    message = String.format(message, amountWaterToDrink);
+                    JOptionPane.showMessageDialog(this, message);
+                }
             } else if (event.getSource() == buttonOpenFrame) {
                 setVisible(false);
             }
@@ -77,7 +82,7 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
         setLayout(new FlowLayout());
 
         // ActionListener
-        buttonAction.addActionListener(this);
+        buttonAction.addActionListener(this); // Boton: Presioname
         buttonOpenFrame.addActionListener(this);
     }
 

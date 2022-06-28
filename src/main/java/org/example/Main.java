@@ -6,6 +6,8 @@ import org.example.view.WaterCalculatorAppGUI;
 
 public class Main {
     public static void main(String[] args) {
+
+        // Documentacion Java Swing: https://docs.oracle.com/javase/tutorial/uiswing/components/list.html
         //System.out.println("Hello world!");
         //new MainFrame().setVisible(true);
 

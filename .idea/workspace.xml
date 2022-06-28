@@ -7,6 +7,8 @@
     <list default="true" id="bf89c3d3-9e05-4788-a5f6-6c20348b86c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/MiVentanaFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/MiVentanaFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/view/WaterCalculatorAppGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/view/WaterCalculatorAppGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
