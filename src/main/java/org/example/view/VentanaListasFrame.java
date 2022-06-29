@@ -16,9 +16,9 @@ public class VentanaListasFrame extends JFrame implements ActionListener {
 
     JLabel nombreUsuarioLabel;
 
-    DefaultListModel listModel;
+    DefaultListModel contenidoJList;
 
-    JList listaNombres;
+    JList listaGraficaNombres;
 
 
     public VentanaListasFrame() {
@@ -30,13 +30,14 @@ public class VentanaListasFrame extends JFrame implements ActionListener {
         nombreUsuarioTextField = new JTextField(5);
         btnAgregarUser = new JButton("Agregar usuario");
 
-        listModel = new DefaultListModel();
-        var listaNombres = new JList(listModel);
-        add(listaNombres);
+        contenidoJList = new DefaultListModel();
+        var listaGraficaNombres = new JList(contenidoJList);
 
         add(nombreUsuarioLabel);
         add(nombreUsuarioTextField);
         add(btnAgregarUser);
+        add(listaGraficaNombres);
+
 
         // Layout: Organizacion de los componentes graficos
         setLayout(new FlowLayout());
@@ -48,8 +49,14 @@ public class VentanaListasFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnAgregarUser) {
             var nombre = nombreUsuarioTextField.getText();
-            // elemento grafico
-            listModel.addElement(nombre);
+            if (nombreUsuarios.contains(nombre)) {
+                JOptionPane.showMessageDialog(this, "error ya existe user");
+            } else {
+                // se agrega a estructura de datos
+                nombreUsuarios.add(nombre);
+                // se agrega a elemento grafico
+                contenidoJList.addElement(nombre);
+            }
         }
     }
 }
