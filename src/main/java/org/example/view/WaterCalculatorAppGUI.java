@@ -11,7 +11,7 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
     private JLabel labelWeight;
     private JTextField fieldWeight;
     private JButton buttonAction;
-    private JButton buttonOpenFrame;
+    private JButton buttonBack;
     private JList namesListComponent;
 
     public WaterCalculatorAppGUI() {
@@ -39,7 +39,7 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
                     message = String.format(message, amountWaterToDrink);
                     JOptionPane.showMessageDialog(this, message);
                 }
-            } else if (event.getSource() == buttonOpenFrame) {
+            } else if (event.getSource() == buttonBack) {
                 setVisible(false);
             }
         } catch (Exception e) {
@@ -52,13 +52,13 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
         labelWeight = new JLabel("Cuanto pesas en kg?");
         fieldWeight = new JTextField(5);
         buttonAction = new JButton("Presioname");
-        buttonOpenFrame = new JButton("Abrir otra ventana");
+        buttonBack = new JButton("Volver");
 
         add(labelQuestion);
         add(labelWeight);
         add(fieldWeight);
         add(buttonAction);
-        add(buttonOpenFrame);
+        add(buttonBack);
 
         java.util.List<String> names = new java.util.ArrayList<>();
         names.add("gonzalo");
@@ -82,7 +82,7 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
 
         // ActionListener
         buttonAction.addActionListener(this); // Boton: Presioname
-        buttonOpenFrame.addActionListener(this);
+        buttonBack.addActionListener(this);
     }
 
     private float calculateAmountOfWater(float weight) {

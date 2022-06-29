@@ -54,7 +54,7 @@ public class tienditaGUI {
 
         JButton btnAddClient = new JButton("Add Cliente");
 
-        //Mostrar graficamente los clientes
+        //Mostrar graficam3ente los clientes
 
         btnAddClient.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

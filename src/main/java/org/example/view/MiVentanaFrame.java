@@ -10,6 +10,9 @@ public class MiVentanaFrame extends JFrame implements ActionListener {
     private JButton botonAccion;
     private JButton botonAccion2;
 
+    private JButton botonAccion3;
+    private JButton botonAbrirVentanaListas;
+
     public MiVentanaFrame() {
         // Esto siempre va en todas las ventanas
         super("Mi ventana titulo");
@@ -19,10 +22,14 @@ public class MiVentanaFrame extends JFrame implements ActionListener {
 
         botonAccion = new JButton("Hola soy boton presioname");
         botonAccion2 = new JButton("Hola soy boton 2 presioname");
+        botonAccion3 = new JButton("Hola soy boton 3 presioname");
+        botonAbrirVentanaListas = new JButton("Abrir ventana con listas");
 
         // Los componentes se agregan a la ventana con add
         add(botonAccion);
         add(botonAccion2);
+        add(botonAccion3);
+        add(botonAbrirVentanaListas);
 
         botonAccion.setSize(200,300);
 
@@ -32,6 +39,8 @@ public class MiVentanaFrame extends JFrame implements ActionListener {
         // ActionLister: escucha cambios en los componentes graficos
         botonAccion.addActionListener(this);
         botonAccion2.addActionListener(this);
+        botonAccion3.addActionListener(this);
+        botonAbrirVentanaListas.addActionListener(this);
     }
 
 
@@ -45,6 +54,14 @@ public class MiVentanaFrame extends JFrame implements ActionListener {
                 this.setVisible(false);
                 new MainFrame().setVisible(true);
                 new LoginFrame().setVisible(true);
+            } else if (evento.getSource() == botonAccion3) {
+                System.out.println("Se apreto boton 3");
+                // abrir otra ventana es crear (pasar por contructor) y
+                // hacerlo visible con .setVisible(true);
+                //this.setVisible(false);
+                new WaterCalculatorAppGUI().setVisible(true);
+            } else if (evento.getSource() == botonAbrirVentanaListas) {
+                new VentanaListasFrame().setVisible(true);
             }
         } catch (Exception exception) {
             JOptionPane.showMessageDialog(this, "Error!");
