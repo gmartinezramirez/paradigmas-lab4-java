@@ -34,8 +34,7 @@ public class WaterCalculatorAppGUI extends JFrame implements ActionListener {
                 float weight = Float.parseFloat(fieldWeight.getText()); // Aca recupera el texto
                 if (weight > 2000) {
                     JOptionPane.showMessageDialog(this, "error");
-                }
-                else {
+                } else {
                     float amountWaterToDrink = calculateAmountOfWater(weight);
                     message = String.format(message, amountWaterToDrink);
                     JOptionPane.showMessageDialog(this, message);

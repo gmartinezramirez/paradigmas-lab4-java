@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.ui.Menu;
 import org.example.view.MainFrame;
 import org.example.view.MiVentanaFrame;
 import org.example.view.WaterCalculatorAppGUI;
@@ -14,6 +15,14 @@ public class Main {
         // Mostrar una ventana - Hacer ventana visible
         new MiVentanaFrame().setVisible(true);
 
-        new WaterCalculatorAppGUI().setVisible(true);
+        // Ejemplo: calculadora de agua
+        //new WaterCalculatorAppGUI().setVisible(true);
+
+        // Ejemplo: tiendita. Otra forma de hacer GUI
+        // Menu por terminal
+        //Menu m = new Menu();
+        //m.run();
+
+        // Menu Grafico
     }
 }
